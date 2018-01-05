@@ -1,0 +1,7 @@
+@mixin font-include($fontname, $path, $fontweight: normal) {
+  @font-face {
+    font-family: $fontname;
+    font-weight: $fontweight;
+    src: url($path);
+    src: url($path + '?#iefix') format('embedded-opentype'), url($path);
+  }
